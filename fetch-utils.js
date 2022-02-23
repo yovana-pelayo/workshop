@@ -8,10 +8,20 @@ export function getUser() {
 }
 export async function getConcerts() {
 
-    const resp = await client.from('concert_title').select('*, person_ticket(*)');
-    console.log(resp);
+    const resp = await client.from('concert_title').select(`*, person_ticket(*)`);
     return checkError(resp);
+}
 
+export async function createTicket(person) {
+    const resp = await client.from('person_ticket').insert(person);
+    return checkError(resp);
+}
+export async function deletePerson(id) { const response = await client .from('person_ticket')
+    .delete()
+    .match({ id: id })
+    .single();
+console.log(id);
+return checkError(response);
 }
 export function checkAuth() {
     const user = getUser();
