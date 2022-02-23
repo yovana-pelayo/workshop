@@ -21,7 +21,7 @@ async function displayConcerts() {
         for (let person of concert.person_ticket) {
             const personEl = renderPerson(person);
 
-            personEl.addEventListener('click', async () => {
+            personEl.addEventListener ('click', async () => {
                 await deletePerson(person.id);
                 displayConcerts();
             });
@@ -32,3 +32,4 @@ async function displayConcerts() {
 }
 
 displayConcerts();
+

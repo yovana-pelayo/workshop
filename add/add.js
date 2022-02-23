@@ -16,15 +16,14 @@ form.addEventListener('submit', async e => {
     const data = new FormData(form);
 
 //here we are setting new data we create to data var... still don't understand how. I get what we are saying and its to simplify but.. Is data an object now? idk ask TA
-    const concertId = data.get('concert-id');
+    const id = data.get('concert-id');
     const name = data.get('person-ticket');
     await createTicket({
-        concert_id: concertId,
+        concert_id: id,
         name: name
     });
 
     form.reset();
-
 });
 // we are saying that when pressing on the submit button we are gathering the data and sending it to our table
 

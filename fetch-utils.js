@@ -14,13 +14,13 @@ export async function getConcerts() {
 
 export async function createTicket(person) {
     const resp = await client.from('person_ticket').insert(person);
+    console.log(person);
     return checkError(resp);
 }
 export async function deletePerson(id) { const response = await client .from('person_ticket')
     .delete()
     .match({ id: id })
     .single();
-console.log(id);
 return checkError(response);
 }
 export function checkAuth() {
