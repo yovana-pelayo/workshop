@@ -1,0 +1,8 @@
+.concert {
+display: flex;
+flex-direction: row;
+margin: 10px;
+color: rgb(31, 212, 236);
+border: 1px rgb(31, 212, 236) solid;
+background-image: url('../assets/galaxy.png');
+}
