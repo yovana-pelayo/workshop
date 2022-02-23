@@ -9,24 +9,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="other-page.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <div class="gutter-right logo">
-        </div>
-    </header>    
+<div class="gutter-right logo">
+    <a href="./other-page" >See All Concerts</a>
+    <a href="/add" >Buy Ticket</a>
+</div> 
     <button id="logout">Logout</button>
     <main>
-        <h1>You are logged in!</h1>
-        <div class="concerts-container"></div>
+        <h1>Get your tickets!</h1>
+      <form class="'person-form">
+          <label> Enter Ticket Holder Name
+              <input name="person-ticket" type="text"/>
+          </label>
+<label>Is Attending 
+    <select id="concert-id" name="concert-id"></select>
+</label>
+      </form>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>
-    <script type="module" src="./other-page.js"></script>
+    <script type="module" src="./add.js"></script>
 </body>
 
 </html>
